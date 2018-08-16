@@ -1,0 +1,474 @@
+/***********************************
+1.  =General
+2.  =Header
+3.  =Viewport
+4.  =About
+5.  =Service_intro
+6.  =Service_boxes
+7.  =Call_to_action  
+8.  =Testimonial
+9.  =Clients
+10. =Footer
+***********************************/
+
+
+
+/********************************************
+=General 
+********************************************/
+
+body{
+	font-family: 'Poppins', sans-serif;
+}
+
+img{
+	width:100%;
+}
+
+h2{
+	font-size: 28px;
+	font-weight: 100;
+	color:#76c369;
+	text-transform: uppercase;
+	letter-spacing: 0.6px;
+	margin-bottom: 10px;
+}
+
+h3{
+	font-size: 38px;
+	font-weight: 700;
+	text-transform: capitalize;
+	letter-spacing: 1px;
+	margin-bottom: 30px;
+}
+
+p{
+	font-size: 18px;
+    font-weight: 300;
+    color: #5b5b5b;
+    line-height: 30px;
+}
+
+.text_blue{
+	color:#00aeef;
+}
+
+.text_black{
+	color:#000;
+}
+
+.text_green{
+	color:#76c369;
+}
+
+.btn-gradient{
+	border-radius: 5px;
+    background: linear-gradient( to right, #F9DF68 15%, #F05751 100%);
+    padding: 10px 20px;
+    margin: 30px 0px;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    font-size: 16px;
+    min-width: 150px;
+}
+
+button.btn.btn-gradient:focus,
+button.btn.btn-gradient:focus-within{
+    background: linear-gradient( to right, #F9DF68 15%, #F05751 100%)!important;
+}
+
+.btn-gradient i{
+	padding-left: 10px;
+}
+
+
+
+/********************************************
+=Header 
+********************************************/
+
+.sticky{
+    position:fixed;
+    top:0px;
+    left:0;
+    right:0;
+    z-index: 999999;
+    transition: all 0.5s;
+}
+
+.cover{
+	transition: all 0.5s;
+}
+
+header#Header {
+    transition: all 0.5s;
+    
+}
+
+header#Header.sticky {
+    background: rgba(0, 0, 0, 0.4);
+    transition: all 0.5s;
+}
+
+header#Header.sticky a.nav-item.nav-link {
+    color: #fff;
+}
+
+header#Header.non-sticky{
+    position: absolute;
+    width: 100%;
+    z-index: 99999;
+    height: 120px;
+    padding: 20px 0;
+    transition: all 0.5s;
+}
+
+nav.navbar.navbar-expand-lg.justify-content-between {
+    box-shadow: none;
+}
+
+nav.navbar a.nav-item.nav-link {
+    font-size:  18px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    color: #00aeef;
+}
+
+nav.navbar a.nav-item.nav-link:hover{
+	color:#fff;
+}
+
+header#Header.sticky a.nav-item.nav-link:hover {
+    color: #45c9fb;
+}
+
+
+/********************************************
+=Viewport 
+********************************************/
+
+section#Viewport {
+    height:  100vh;
+    overflow:  hidden;
+}
+
+.slide_image img {
+    width: 100vw;
+    height: auto;
+}
+
+.slider_text{
+    position: absolute;
+    top: 0;
+    left: 10vw;
+    width: 100vw;
+    height: 100vh;
+    display: table;
+}
+
+.slider_text .container {
+    display:  table-cell;
+    vertical-align:  middle;
+}
+
+.slider_text h1{
+	color:#76c369;
+	font-weight: 700;
+	font-size: 40px;
+	text-transform: capitalize;
+	letter-spacing: 2px;
+}
+
+
+/********************************************
+=About 
+********************************************/
+
+section#About {
+    height:  100vh;
+    width: 100%;
+    display: table;
+}
+
+section#About .container {
+    display:  table-cell;
+    vertical-align:  middle;
+}
+
+
+
+/********************************************
+=Service_intro 
+********************************************/
+
+section#Service_intro{
+	background: #F1F1F3 url("../img/office-925806_640.jpg") no-repeat left top;
+	height: 550px;
+	background-size: contain;
+}
+
+.single_box {
+    margin: 30px 0;
+}
+
+.service_intro {
+    background: #f1f1f3;
+    margin-left: -30px;
+    padding-left: 30px;
+    height: 550px;
+    display: table;
+}
+
+.service_intro_text{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+/********************************************
+=Service_boxes
+********************************************/
+
+section#Service_boxes {
+    padding: 100px 0 60px;
+}
+
+.single_box .card-text {
+    line-height:  22px;
+    padding: 0 10px;
+}
+
+.single_box .card {
+    background: #F2F2F2;
+}
+
+
+
+
+/********************************************
+=Call_to_action
+********************************************/
+
+section#Call_to_action {
+    background: #f6f6f6;
+    /*padding:50px 0;*/
+}
+
+.symbol_plant {
+    height:  auto;
+    overflow:  hidden;
+}
+
+.symbol_plant img{
+    width: 60%;
+    float: right;
+    position: absolute;
+    right: 65px;
+    bottom: 50px;
+}
+
+.call_text h3 {
+    font-size:  35px;
+    color: #3A9167;
+}
+
+.call_body{
+	min-height: 500px;
+	display: table;
+}
+
+.call_body_content{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+span.call_number {
+    font-size:  28px;
+    color: #333;
+    font-weight: 300;
+    letter-spacing:  1.5px;
+}
+
+.message_action{
+	padding-top:35px;
+}
+
+.message_action button.btn.btn-gradient {
+    margin: 10px;
+}
+
+/********************************************
+=Testimonial
+********************************************/
+
+section#Testimonial {
+    padding: 50px 0 30px;
+}
+
+.testimonial_slide {
+    padding-top: 40px;
+}
+
+.client_image img {
+    max-width: 400px;
+    float: left;
+}
+
+.client_message p {
+    padding: 0 50px;
+}
+
+.client_identity {
+    padding-top: 30px;
+}
+
+.client_identity span.client_name {
+    font-size:  20px;
+    font-weight: 500;
+}
+
+.client_identity span.company_name {
+    font-size:  22px;
+    font-weight:  700;
+    letter-spacing:  0.5px;
+}
+
+.client_identity p.client_designation {
+    margin-bottom: 0;
+    font-style: italic;
+}
+
+
+
+/********************************************
+=Clients
+********************************************/
+
+section#Clients {
+    padding: 30px 0;
+    /*border-top: 1px solid #ddd;*/
+}
+
+.single_client_logo {
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+
+/********************************************
+=Footer
+********************************************/
+
+#Footer{
+	background:#3A3A3A;
+}
+
+.footer_main{
+	border-bottom:1px solid #ddd;
+	padding:30px 0 40px;
+}
+
+.footer_logo img {
+    padding: 25px 0 10px;
+    width: auto;
+}
+
+.about_intro {
+    padding: 20px 0;
+}
+
+.about_intro p {
+    font-size:  15px;
+    color: #fff;
+    letter-spacing:  0.5px;
+    margin-bottom: 5px;
+    padding-right: 50px;
+}
+
+.social_menu ul li {
+    display:  inline-block;
+    margin-right: 8px;
+}
+
+.social_menu ul li a {
+    padding: 6px;
+    border: 1px solid #fff;
+    width: 30px;
+    height: 30px;
+    text-align:  center;
+    font-size: 16px;
+    color: #fff;
+}
+
+.social_menu ul li a:hover{
+	color:#00aeef;
+}
+
+.social_menu ul {
+    padding-left: 0px;
+}
+
+.pages_menu,
+.address{
+	padding-top:55px;
+}
+
+.pages_menu h4,
+.address h4{
+	color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    padding-bottom: 15px;
+    letter-spacing: 0.8px;
+}
+
+.pages_menu{
+	
+}
+
+.address{
+	
+}
+
+.pages_menu ul {
+    padding-left: 18px;
+}
+
+.pages_menu ul li {
+    list-style: none;
+    margin: 5px 0;
+    list-style-type: square;
+    color:#8BC63F;
+    padding-left: 18px;
+}
+
+.pages_menu ul li a {
+    font-size: 14px;
+    color: #ddd;
+    margin-left: -15px;
+    letter-spacing: 0.5px;
+}
+
+.address p {
+    font-size:  13px;
+    line-height:  20px;
+    color: #ddd;
+    margin-bottom: 15px;
+}
+
+.address p i {
+    padding-right: 8px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.footer_bottom{
+	height: 40px;
+}
+
+.footer_bottom p{
+    margin: 0;
+    color: #ddd;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+	line-height: 40px;
+}
