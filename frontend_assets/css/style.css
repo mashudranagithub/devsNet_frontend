@@ -64,12 +64,16 @@ p{
 .btn-gradient{
 	border-radius: 5px;
     background: linear-gradient( to right, #F9DF68 15%, #F05751 100%);
-    padding: 10px 20px;
+    min-width: 150px;
     margin: 30px 0px;
     text-transform: capitalize;
+    padding: 10px 20px;
+}
+
+.btn-gradient a{
     letter-spacing: 0.5px;
     font-size: 16px;
-    min-width: 150px;
+    color:#fff;
 }
 
 button.btn.btn-gradient:focus,
@@ -188,6 +192,8 @@ section#About {
     height:  100vh;
     width: 100%;
     display: table;
+    background: url('../img/backgrounds/about-background.jpg') center center;
+    background-size: cover;
 }
 
 section#About .container {
@@ -202,7 +208,7 @@ section#About .container {
 ********************************************/
 
 section#Service_intro{
-	background: #F1F1F3 url("../img/office-925806_640.jpg") no-repeat left top;
+	background: #F1F1F3 url("../img/backgrounds/service-background.jpg") no-repeat left top;
 	height: 550px;
 	background-size: contain;
 }
@@ -213,8 +219,6 @@ section#Service_intro{
 
 .service_intro {
     background: #f1f1f3;
-    margin-left: -30px;
-    padding-left: 30px;
     height: 550px;
     display: table;
 }
@@ -234,11 +238,44 @@ section#Service_boxes {
 
 .single_box .card-text {
     line-height:  22px;
-    padding: 0 10px;
+    padding: 0 5px;
 }
 
 .single_box .card {
-    background: #F2F2F2;
+    background: #fff;
+}
+
+.single_box .card-body {
+    padding-top: 0;
+}
+
+.single_box .card:hover {
+    box-shadow: 0 16px 28px 0 #ddd;
+    border-left: 10px solid #2196F3;
+    box-sizing: border-box;
+    margin-left: -10px;
+}
+
+.single_box .card-body h4.card-title {
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 700;
+    letter-spacing: 0px;
+}
+
+.service_image_box {
+    display:  table;
+}
+
+.service_image {
+    display:  table-cell;
+    vertical-align:  middle;
+    height: 160px;
+}
+
+.service_image img {
+    width: auto;
+    height: 120px;
 }
 
 
@@ -249,21 +286,9 @@ section#Service_boxes {
 ********************************************/
 
 section#Call_to_action {
-    background: #f6f6f6;
-    /*padding:50px 0;*/
-}
-
-.symbol_plant {
-    height:  auto;
-    overflow:  hidden;
-}
-
-.symbol_plant img{
-    width: 60%;
-    float: right;
-    position: absolute;
-    right: 65px;
-    bottom: 50px;
+    background: url('../img/backgrounds/cta-background.jpg') no-repeat;
+    background-size: cover;
+    background-position: bottom left;
 }
 
 .call_text h3 {
@@ -272,7 +297,7 @@ section#Call_to_action {
 }
 
 .call_body{
-	min-height: 500px;
+	min-height: 530px;
 	display: table;
 }
 
