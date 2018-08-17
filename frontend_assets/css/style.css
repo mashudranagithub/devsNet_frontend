@@ -244,17 +244,14 @@ section#Service_boxes {
 
 .single_box .card-text {
     line-height:  22px;
-    padding: 0 5px;
+    font-size: .9rem;
+    font-weight: 400;
+    padding: 0 15px 20px;
 }
 
 .single_box .card {
     background: #fff;
     transition: all 0.5s;
-/* -webkit-transition:  border .3s ease;
- -moz-transition:  border .3s ease;
- -o-transition:  border .3s ease;
- -ms-transition: border .3s ease;
- transition: border .3s ease; */
 }
 
 .single_box .card::before{
@@ -264,20 +261,10 @@ section#Service_boxes {
     top:0;
     height: 100%;
     width:0;
+    border-radius: 5px 0 0 5px;
     background: #2196F3;
     transition: 0.5s;
 }
-
-/*.single_box .card:hover {
-    box-shadow: 0 16px 28px 0 #ddd;
-    border-left: 10px solid #2196F3;
-    box-sizing: border-box!important;
-}
-
-.single_box .card:hover .service_image_box,
-.single_box .card:hover .card-body {
-    margin-left:-10px;
-}*/
 
 .single_box .card:hover {
     box-shadow: 0 16px 28px 0 #ddd;
