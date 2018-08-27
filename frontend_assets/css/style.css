@@ -128,7 +128,7 @@ header#Header.non-sticky{
     position: absolute;
     width: 100%;
     z-index: 99999;
-    height: 120px;
+    /*height: 120px;*/
     padding: 20px 0;
     transition: all 0.5s;
 }
@@ -448,6 +448,7 @@ section#Clients {
 
 .social_menu ul li a:hover{
 	color:#00aeef;
+    background: #fff;
 }
 
 .social_menu ul {
@@ -506,6 +507,11 @@ section#Clients {
     padding-right: 8px;
     color: #fff;
     font-size: 16px;
+}
+
+.address p i.fa.fa-address-card-o {
+    height: 60px;
+    float: left;
 }
 
 .footer_bottom{
