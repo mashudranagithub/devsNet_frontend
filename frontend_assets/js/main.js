@@ -98,7 +98,7 @@ $(document).ready(function(){
 // Full page Scrolling effect
     new fullpage('#fullpage', {
         scrollBar:true,
-        normalScrollElements: '#Service_boxes'
+        normalScrollElements: '#Service_boxes, #Footer, #Call_to_action, #Clients, #Testimonial'
     });
 
     // for smoot scrollling

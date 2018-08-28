@@ -49,6 +49,18 @@ p{
     line-height: 30px;
 }
 
+.m-t-5-plus{
+    margin-top:5px;
+}
+
+.m-t-90-plus{
+    margin-top:90px;
+}
+
+.m-t-15-minus{
+    margin-top:-10px;
+}
+
 .text_blue{
 	color:#00aeef;
 }
@@ -146,7 +158,7 @@ nav.navbar a.nav-item.nav-link {
 }
 
 nav.navbar a.nav-item.nav-link:hover{
-	color:#fff;
+	color: #77c169!important;
 }
 
 header#Header.sticky a.nav-item.nav-link:hover {
@@ -189,7 +201,7 @@ section#Viewport {
 .slider_text h1{
 	color:#76c369;
 	font-weight: 700;
-	font-size: 40px;
+	font-size: 80px;
 	text-transform: capitalize;
 	letter-spacing: 2px;
 }
@@ -220,7 +232,7 @@ section#About .container {
 
 section#Service_intro{
 	background: #F1F1F3 url("../img/backgrounds/service-background.jpg") no-repeat left top;
-	height: 550px;
+	height: 100vh;
 	background-size: contain;
 }
 
@@ -230,7 +242,7 @@ section#Service_intro{
 
 .service_intro {
     background: #f1f1f3;
-    height: 550px;
+    height: 100vh;
     display: table;
 }
 
@@ -281,6 +293,7 @@ section#Service_boxes {
 
 .single_box .card-body {
     padding-top: 0;
+    min-height: 270px;/*This line should be delete after backend integration*/
 }
 
 .single_box .card-body h4.card-title {
@@ -401,8 +414,8 @@ section#Clients {
 }
 
 .single_client_logo {
-    padding: 20px;
-    border: 1px solid #ddd;
+    padding: 75px;
+    opacity: 0.7;
 }
 
 
