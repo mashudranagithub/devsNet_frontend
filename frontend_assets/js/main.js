@@ -67,5 +67,40 @@ $(document).ready(function(){
     });
 
 
+// Viewport background effect
+    $('#Viewport').mousemove(function(e){
+        var moveX = (e.pageX * -1/15);
+        var moveY = (e.pageY * -1/15);
+        $('.slider_text .container').css('background-position', moveX + 'px ' + moveY + 'px');
+    });
+
+    $('#Viewport').mousemove(function(e){
+        var moveX = (e.pageX * -1/20);
+        var moveY = (e.pageY * -1/20);
+        $('.slider_text').css('background-position', moveX + 'px ' + moveY + 'px');
+    });
+
+    $('#Header').mousemove(function(e){
+        var moveX = (e.pageX * -1/15);
+        var moveY = (e.pageY * -1/15);
+        $('.slider_text .container').css('background-position', moveX + 'px ' + moveY + 'px');
+    });
+
+    $('#Header').mousemove(function(e){
+        var moveX = (e.pageX * -1/20);
+        var moveY = (e.pageY * -1/20);
+        $('.slider_text').css('background-position', moveX + 'px ' + moveY + 'px');
+    });
+
+
+
+
+// Full page Scrolling effect
+    new fullpage('#fullpage', {
+        scrollBar:true,
+        normalScrollElements: '#Service_boxes'
+    });
+
+
 
 });

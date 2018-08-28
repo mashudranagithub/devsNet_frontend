@@ -174,11 +174,15 @@ section#Viewport {
     width: 100vw;
     height: 100vh;
     display: table;
+    background:  url('../img/backgrounds/layer-3.png') no-repeat right top;
+    background-size: contain;
 }
 
 .slider_text .container {
     display:  table-cell;
     vertical-align:  middle;
+    background: url('../img/backgrounds/layer-2.png') no-repeat left top;
+    background-size: cover;
 }
 
 .slider_text h1{
@@ -447,7 +451,7 @@ section#Clients {
 }
 
 .social_menu ul li a:hover{
-	color:#00aeef;
+	color: #3a3a3a;
     background: #fff;
 }
 
@@ -510,7 +514,7 @@ section#Clients {
 }
 
 .address p i.fa.fa-address-card-o {
-    height: 60px;
+    height: 50px;
     float: left;
 }
 
@@ -525,3 +529,6 @@ section#Clients {
     letter-spacing: 0.5px;
 	line-height: 40px;
 }
+
+
+
