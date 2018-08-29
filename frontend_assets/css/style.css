@@ -38,7 +38,7 @@ h3{
 	font-size: 38px;
 	font-weight: 700;
 	text-transform: capitalize;
-	letter-spacing: 1px;
+	/*letter-spacing: 1px;*/
 	margin-bottom: 30px;
 }
 
@@ -61,6 +61,12 @@ p{
     margin-top:-10px;
 }
 
+.left-25vw{
+    left:25vw!important;
+}
+
+
+
 .text_blue{
 	color:#00aeef;
 }
@@ -78,7 +84,7 @@ p{
     min-width: 150px;
     margin: 30px 0px;
     text-transform: capitalize;
-    padding: 10px 20px;
+    padding: 10px 0px;
     flex: 1 1 auto;
     transition: 0.5s;
     background-size: 200% auto;
@@ -129,7 +135,7 @@ header#Header {
 }
 
 header#Header.sticky {
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.7);
     transition: all 0.5s;
 }
 
@@ -145,6 +151,23 @@ header#Header.non-sticky{
     padding: 20px 0;
     transition: all 0.5s;
 }
+
+header#Header.sticky .logo img {
+    max-height: 50px;
+    width: auto;
+    transition: 0.3s ease;
+}
+
+header#Header.non-sticky .logo img {
+    max-height: auto;
+    width: auto;
+    transition: .3s ease;
+}
+
+header#Header .logo img {
+    transition: .3s ease;
+}
+
 
 nav.navbar.navbar-expand-lg.justify-content-between {
     box-shadow: none;
@@ -199,11 +222,11 @@ section#Viewport {
 }
 
 .slider_text h1{
-	color:#76c369;
-	font-weight: 700;
-	font-size: 80px;
-	text-transform: capitalize;
-	letter-spacing: 2px;
+    color: #76c369;
+    font-weight: 700;
+    font-size: 40px;
+    text-transform: capitalize;
+
 }
 
 
@@ -260,7 +283,7 @@ section#Service_boxes {
 }
 
 .single_box .card-text {
-    line-height:  22px;
+    line-height: 1.5rem;
     font-size: .9rem;
     font-weight: 400;
     padding: 0 15px 20px;
@@ -293,7 +316,7 @@ section#Service_boxes {
 
 .single_box .card-body {
     padding-top: 0;
-    min-height: 270px;/*This line should be delete after backend integration*/
+    min-height: 290px;/*This line should be delete after backend integration*/
 }
 
 .single_box .card-body h4.card-title {
@@ -442,11 +465,19 @@ section#Clients {
 }
 
 .about_intro p {
-    font-size:  15px;
+/*    font-size:  15px;
     color: #fff;
     letter-spacing:  0.5px;
     margin-bottom: 5px;
-    padding-right: 50px;
+    padding-right: 50px;*/
+
+    font-size: 13px;
+    color: #ddd;
+    /* letter-spacing: 0.5px; */
+    margin-bottom: 5px;
+    padding-right: 120px;
+    line-height: 1.3rem;
+
 }
 
 .social_menu ul li {
@@ -539,9 +570,10 @@ section#Clients {
 .footer_bottom p{
     margin: 0;
     color: #ddd;
-    font-size: 16px;
+    font-size: 13px;
     letter-spacing: 0.5px;
-	line-height: 40px;
+    line-height: 40px;
+    text-align: center;
 }
 
 
