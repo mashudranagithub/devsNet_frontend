@@ -9,13 +9,59 @@
 8.  =Testimonial
 9.  =Clients
 10. =Footer
+
+
+11. =Responsive CSS
 ***********************************/
-
-
 
 /********************************************
 =General 
 ********************************************/
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Bold.eot');
+    src: url('../fonts/Poppins-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Poppins-Bold.woff2') format('woff2'),
+        url('../fonts/Poppins-Bold.woff') format('woff'),
+        url('../fonts/Poppins-Bold.svg#Poppins-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Regular.eot');
+    src: url('../fonts/Poppins-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Poppins-Regular.woff2') format('woff2'),
+        url('../fonts/Poppins-Regular.woff') format('woff'),
+        url('../fonts/Poppins-Regular.svg#Poppins-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Light.eot');
+    src: url('../fonts/Poppins-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Poppins-Light.woff2') format('woff2'),
+        url('../fonts/Poppins-Light.woff') format('woff'),
+        url('../fonts/Poppins-Light.svg#Poppins-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Thin.eot');
+    src: url('../fonts/Poppins-Thin.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Poppins-Thin.woff2') format('woff2'),
+        url('../fonts/Poppins-Thin.woff') format('woff'),
+        url('../fonts/Poppins-Thin.svg#Poppins-Thin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}
+
 
 body{
 	font-family: 'Poppins', sans-serif;
@@ -110,6 +156,22 @@ button.btn.btn-gradient:focus-within{
 	padding-left: 10px;
 }
 
+#back-to-top {
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    width: 35px;
+    height: 30px;
+    background: #77c169;
+    text-align: center;
+    color: #fff;
+    line-height: 30px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
 
 
 /********************************************
@@ -135,12 +197,12 @@ header#Header {
 }
 
 header#Header.sticky {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(255, 255, 255, 0.9);
     transition: all 0.5s;
 }
 
 header#Header.sticky a.nav-item.nav-link {
-    color: #fff;
+    color: #333;
 }
 
 header#Header.non-sticky{
@@ -198,35 +260,45 @@ section#Viewport {
     overflow:  hidden;
 }
 
-.slide_image img {
-    width: 100vw;
-    height: auto;
+.single_slider {
+    height:  100vh;
+    width: 100%;
+    background-size: cover!important;
+    background-position: top center;
 }
 
 .slider_text{
-    position: absolute;
-    top: 0;
-    left: 10vw;
-    width: 100vw;
-    height: 100vh;
+
+    background-image:  url('../img/backgrounds/layer-3.png');
+    background-position: top center;
+}
+
+.slider_text_bg{
+    background-image: url('../img/backgrounds/layer-2.png') ;
+
+    background-position: top right;
     display: table;
-    background:  url('../img/backgrounds/layer-3.png') no-repeat right top;
+}
+
+.slider_text,
+.slider_text_bg{
+        width: 100%;
+    height: 100vh;
+        background-repeat:no-repeat;
     background-size: contain;
 }
 
-.slider_text .container {
-    display:  table-cell;
-    vertical-align:  middle;
-    background: url('../img/backgrounds/layer-2.png') no-repeat left top;
-    background-size: cover;
+.slider_middle_text{
+    display: table-cell;
+    vertical-align: middle;
 }
 
-.slider_text h1{
+.slider_text span.big_text{
     color: #76c369;
     font-weight: 700;
     font-size: 40px;
     text-transform: capitalize;
-
+    display: block;
 }
 
 
@@ -254,9 +326,14 @@ section#About .container {
 ********************************************/
 
 section#Service_intro{
-	background: #F1F1F3 url("../img/backgrounds/service-background.jpg") no-repeat left top;
+	background: url("../img/backgrounds/service-background.jpg") no-repeat left top;
 	height: 100vh;
 	background-size: contain;
+}
+
+.service_bg_image{
+    background: url("../img/backgrounds/service-background2.jpg") repeat-y;
+    background-size: 100%;
 }
 
 .single_box {
@@ -578,3 +655,295 @@ section#Clients {
 
 
 
+/**************************************************
+=Responsive CSS
+***************************************************/
+
+@media screen and (max-width: 767px) {
+
+h2 {
+    font-size:  18px;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+p {
+    line-height:  22px;
+    font-size: 1rem;
+}
+
+
+header#Header.non-sticky .logo img{
+    max-width: 180px;
+    position: absolute;
+    top: 0;
+}
+
+
+
+
+    .slider_text,
+    .slider_text_bg {
+        height: 75vh;
+        top: 50%;
+        left: 25px;
+        background-position: center center!important;
+        background-size: cover;
+    }
+
+    .slider_text span.big_text {
+        font-size:  25px;
+        line-height:  2rem;
+    }
+
+
+    .btn-gradient {
+        margin-top: 10px;
+        padding: 5px!important;
+        min-width:100px;
+    }
+
+    .btn-gradient a {
+        padding: 5px;
+        font-size:14px;
+    }
+
+
+
+
+
+
+    section#Viewport{
+        height:75vh;
+    }
+
+
+    .slide_image {
+        height: 75vh;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .slider_middle_text {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top:40px;
+    }
+
+
+
+    section#About, section#Service_intro {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+
+
+    .service_intro {
+        background:  transparent;
+    }
+
+    section#Service_intro {
+    background-position: top center;
+        background-size: contain;
+    }
+
+    .call_text h3 {
+        font-size:  25px;
+    }
+
+    .call_body {
+        padding: 0 30px;
+    }
+
+
+
+
+
+    section#Testimonial {
+        padding: 90px 0 30px;
+    }
+
+
+
+    .client_image {
+        padding: 0 50px 0;
+    }
+
+    .client_message {
+        margin-top: 15px;
+    }
+
+    .client_image img {
+        max-width: 100%;
+    }
+
+    .client_message p {
+        padding: 10px;
+        line-height: 18px;
+        font-size:  14px;
+    }
+
+    .testimonial_slide{
+        padding-top:10px;
+    }
+
+    .client_identity {
+        padding-top: 0px;
+        margin: 0;
+    }
+
+    .client_identity span.client_name {
+        font-size:  15px;
+        font-weight: 700;
+    }
+
+    .client_identity span.company_name {
+        font-size:  16px;
+        line-height:  25px;
+    }
+
+
+
+
+
+    section#Clients {
+        padding-top: 80px;
+    }
+
+    .single_client_logo {
+        padding: 10px;
+        text-align:center;
+    }
+
+    .single_client_logo img {
+        max-height: 70px;
+        width: auto;
+        margin: 0 auto;
+    }
+
+
+
+
+
+
+
+    .footer_logo img {
+        height: 90px;
+        width: auto;
+        margin: 0 auto;
+        display: block;
+    }
+
+
+    .about_intro p {
+        padding: 0px;
+    }
+
+    .pages_menu {
+        padding-top:  10px;
+    }
+
+    .pages_menu h4, .address h4 {
+        font-size:  18px;
+        margin-bottom: 0px;
+        padding: 0px;
+    }
+
+    .footer_main {
+        padding: 20px;
+    }
+
+    .pages_menu, .address {
+        padding-top: 15px;
+    }
+
+
+    .pages_menu ul li {
+        line-height:  20px;
+    }
+
+    .pages_menu ul {
+        padding-top: 10px;
+    }
+
+    .address h4 {
+        margin-bottom: 15px;
+    }
+
+
+
+    /*offcanvas menu*/
+    /* The side navigation menu */
+    .sidenav {
+        height: 100%; /* 100% Full-height */
+        width: 0; /* 0 width - change this with JavaScript */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Stay on top */
+        top: 0;
+        right: 0;
+        background-color: #111; /* Black*/
+        overflow-x: hidden; /* Disable horizontal scroll */
+        padding-top: 60px; /* Place content 60px from the top */
+        transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    }
+
+    /* The navigation menu links */
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #00aeef!important;
+        display: block;
+        transition: 0.3s;
+    }
+
+    nav.navbar a.nav-item.nav-link{
+        padding-left: 30px;
+    }
+
+    /* When you mouse over the navigation links, change their color */
+    .sidenav a:hover {
+        color: #f1f1f1;
+    }
+
+    /* Position and style the close button (top right corner) */
+    .sidenav a.closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+
+    #mySidenav{
+        display: block;
+    }
+
+    .navbar-nav.big_screen{
+        display:none;
+    }
+
+
+
+
+
+
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+@media screen and (min-width: 768px) {
+    div#mySidenav {
+        display:  none;
+    }
+}

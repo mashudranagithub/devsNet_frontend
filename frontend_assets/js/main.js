@@ -69,39 +69,34 @@ $(document).ready(function(){
 
 // Viewport background effect
     $('#Viewport').mousemove(function(e){
-        var moveX = (e.pageX * -1/15);
-        var moveY = (e.pageY * -1/15);
-        $('.slider_text .container').css('background-position', moveX + 'px ' + moveY + 'px');
+        var moveX = (e.pageX * 1/75);
+        var moveY = (e.pageY * 1/75);
+        $('.slider_text').css('background-position', moveX + 'px ' + moveY + 'px');
     });
 
     $('#Viewport').mousemove(function(e){
-        var moveX = (e.pageX * -1/20);
-        var moveY = (e.pageY * -1/20);
+        var moveX = (e.pageX * 1/55);
+        var moveY = (e.pageY * 1/55);
+        $('.slider_text_bg').css('background-position', moveX + 'px ' + moveY + 'px');
+    });
+
+    $('#Header').mousemove(function(e){
+        var moveX = (e.pageX * 1/25);
+        var moveY = (e.pageY * 1/25);
         $('.slider_text').css('background-position', moveX + 'px ' + moveY + 'px');
     });
 
     $('#Header').mousemove(function(e){
-        var moveX = (e.pageX * -1/15);
-        var moveY = (e.pageY * -1/15);
-        $('.slider_text .container').css('background-position', moveX + 'px ' + moveY + 'px');
-    });
-
-    $('#Header').mousemove(function(e){
-        var moveX = (e.pageX * -1/20);
-        var moveY = (e.pageY * -1/20);
-        $('.slider_text').css('background-position', moveX + 'px ' + moveY + 'px');
+        var moveX = (e.pageX * 1/30);
+        var moveY = (e.pageY * 1/30);
+        $('.slider_text_bg').css('background-position', moveX + 'px ' + moveY + 'px');
     });
 
 
 
 
-// Full page Scrolling effect
-    new fullpage('#fullpage', {
-        scrollBar:true,
-        normalScrollElements: '#Service_boxes, #Footer, #Call_to_action, #Clients, #Testimonial'
-    });
 
-    // for smoot scrollling
+// for smoot scrollling
 
 // Select all links with hashes
 $('a[href*="#"]')
@@ -141,9 +136,63 @@ $('a[href*="#"]')
   });
 
 
+// for scrollify
+        $(function() {
+          $.scrollify({
+            section : ".example-classname",
+            sectionName : "false",
+            interstitialSection : ".header, .call_to_action, .testimonial, .clients, .footer",
+            easing: "easeOutExpo",
+            scrollSpeed: 1100,
+            offset : 0,
+            scrollbars: true,
+            standardScrollElements: ".boxes",
+            setHeights: true,
+            overflowScroll: true,
+            updateHash: true,
+            touchScroll:true,
+          });
+        });
+
+
+
+
+
+$(window).scroll(function () {
+  if ($(this).scrollTop() > 50) {
+    $('#back-to-top').fadeIn(1000);
+  } else {
+    $('#back-to-top').fadeOut(1000);
+  }
+});
+// scroll body to 0px on click
+$('#back-to-top').click(function () {
+  // $('#back-to-top').tooltip('hide');
+  $('body,html').animate({
+    scrollTop: 0
+  }, 1500);
+  return false;
+});
+
+$('#back-to-top').tooltip('show');
+
+
+
+
 
 });
 
+
+function openNav() {
+  document.getElementById("mySidenav").style.width = "200px";
+  // document.getElementById("main").style.marginLeft = "250px";
+}
+
+/* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  // document.getElementById("main").style.marginLeft = "0";
+}
 
 
 

@@ -12,103 +12,121 @@
 
     <!-- Font Awesome -->
     <link href="frontend_assets/css/font-awesome.min.css"rel="stylesheet" >
-    <!-- Poppins Font -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,400,700" rel="stylesheet">
+
     <!-- Bootstrap core CSS -->
     <link href="frontend_assets/css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="frontend_assets/css/mdb.min.css" rel="stylesheet">
-    <!-- Animate Css -->
-    <link href="frontend_assets/css/animate.css" rel="stylesheet">
     <!-- Owl Carousel Css -->
     <link href="frontend_assets/css/owl.carousel.min.css" rel="stylesheet">
-    <link href="frontend_assets/css/fullpage.css" rel="stylesheet">
     <!-- custom styles -->
     <link href="frontend_assets/css/style.css" rel="stylesheet">
 </head>
 
 <body>
-    <div id="fullpage">
         <!-- Start project here-->
-
-        <div class="section active fp-auto-height-responsive">
-            <!-- Start Header -->
-            <header id="Header" class="non-sticky">
+        <h1 style="display: none;">Developers Network</h1>
+    <div class="example-classname header">
+        <!-- Start Header -->
+        <header id="Header" class="non-sticky">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-8">
-                            <nav class="navbar navbar-expand-lg justify-content-between">
+                        <div class="col-md-8 col-sm-12">
+                            <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
 
-                                <div class="logo">
-                                    <a href="index.html">
+                                <div class="navbar-brand logo">
+                                    <a href="/">
                                         <img src="frontend_assets/img/logo/main-logo.png" alt="Logo Image">
                                     </a>
                                 </div>
 
                                 <div class="main_menu">
-                                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
-                                    aria-expanded="false" aria-label="Toggle navigation">
-                                    <span class="navbar-toggler-icon"></span>
-                                </button>
+                                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02"
+                                        aria-expanded="false" aria-label="Toggle navigation">
+                                        <span onclick="openNav()" class="navbar-toggler-icon"></span>
+                                    </button>
 
 
-                                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                                    <div class="navbar-nav">
-                                        <a class="nav-item nav-link active" href="#About">About <span class="sr-only">(current)</span></a>
-                                        <a class="nav-item nav-link" href="#Service_boxes">Services</a>
-                                        <a class="nav-item nav-link" href="#Clients">Clients</a>
-                                        <a class="nav-item nav-link" href="#Footer">Contact</a>
+                                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                                        <div class="navbar-nav big_screen">
+                                            <!--this is a bookmark test for about page -->
+                                            <a class="nav-item nav-link" name="About" href="#About">About <span class="sr-only">(current)</span></a>
+                                            <a class="nav-item nav-link" href="#Service_intro">Services</a>
+                                            <a class="nav-item nav-link" href="#Clients">Clients</a>
+                                            <a class="nav-item nav-link" href="#Footer">Contact</a>
+                                        </div>
+
+                                        <!-- Start markup only for mobile device -->
+                                        <div class="navbar-nav sidenav" id="mySidenav">
+                                            <a onclick="closeNav()" href="javascript:void(0)" class="closebtn">&times;</a>
+                                            <!--this is a bookmark test for about page -->
+                                            <a onclick="closeNav()" class="nav-item nav-link" name="About" href="#About">About <span class="sr-only">(current)</span></a>
+                                            <a onclick="closeNav()" class="nav-item nav-link" href="#Service_intro">Services</a>
+                                            <a onclick="closeNav()" class="nav-item nav-link" href="#Clients">Clients</a>
+                                            <a onclick="closeNav()" class="nav-item nav-link" href="#Footer">Contact</a>
+                                        </div>
+                                        <!-- End markup for mobile device -->
                                     </div>
+
+
                                 </div>
-                            </div>
 
                         </nav>
                     </div>
                 </div>
             </div>
+
+
         </header><!-- End Header -->
         <!-- Start Viewport -->
+        
         <section id="Viewport" class="owl-carousel">
-            <div class="single_slider">
-                <div class="slide_image">
-                    <img src="frontend_assets/img/slider/Beautifully-crafted.jpg" alt="Slider Image">
-                </div>
+            <div class="single_slider" style="background: url('frontend_assets/img/slider/Beautifully-crafted.jpg');">
+
                 <div class="slider_text">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-7">
-                                <h1>Beautifully Crafted</h1>
-                                <button class="btn btn-gradient"><a href="#">Learn More <i class="fa fa-angle-right" aria-hidden="true"></i></a></button>
+                    <div class="slider_text_bg">
+                        <div class="slider_middle_text">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <span class="big_text">Beautifully Crafted</span>
+                                        <button class="btn btn-gradient"><a href="#">Learn More <i class="fa fa-angle-right" aria-hidden="true"></i></a></button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="single_slider">
-                <div class="slide_image">
-                    <img src="frontend_assets/img/slider/Best-possible-solution.jpg" alt="Slider Image">
-                </div>
+            <div class="single_slider" style="background: url('frontend_assets/img/slider/Best-possible-solution.jpg');">
+
                 <div class="slider_text">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-7">
-                                <h1>Best Possible Solution</h1>
-                                <button class="btn btn-gradient"><a href="#">Learn More <i class="fa fa-angle-right" aria-hidden="true"></i></a></button>
+                    <div class="slider_text_bg">
+                        <div class="slider_middle_text">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <span class="big_text">Best Possible Solution</span>
+                                        <button class="btn btn-gradient"><a href="#">Learn More <i class="fa fa-angle-right" aria-hidden="true"></i></a></button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="single_slider">
-                <div class="slide_image">
-                    <img src="frontend_assets/img/slider/understanding-market.jpg" alt="Slider Image">
-                </div>
-                <div class="slider_text left-25vw">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-7">
-                                <h1>Understanding the Market Trend</h1>
-                                <button class="btn btn-gradient"><a href="#">Learn More <i class="fa fa-angle-right" aria-hidden="true"></i></a></button>
+            <div class="single_slider" style="background: url('frontend_assets/img/slider/understanding-market.jpg');">
+
+                <div class="slider_text">
+                    <div class="slider_text_bg">
+                        <div class="slider_middle_text">
+                            <div class="container">
+                                <div class="row justify-content-center text-center">
+                                    <div class="col-md-7">
+                                        <span class="big_text">Understanding the Market Trend</span>
+                                        <button class="btn btn-gradient"><a href="#">Learn More <i class="fa fa-angle-right" aria-hidden="true"></i></a></button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -116,9 +134,8 @@
             </div>
         </section><!-- End Viewport -->
     </div>
-
     <!-- Start About -->
-    <div class="section">
+    <div class="example-classname">
         <section id="About">
             <div class="container">
                 <div class="row justify-content-center">
@@ -132,11 +149,10 @@
                     </div>
                 </div>
             </div>
-        </section>
-    </div><!-- End About -->
-
+        </section><!-- End About -->
+    </div>
     <!-- Start Service_intro -->
-    <div class="section">
+    <div class="example-classname service_bg_image">
         <section id="Service_intro">
             <div class="container">
                 <div class="row justify-content-end">
@@ -146,17 +162,16 @@
                                 <h2>Services</h2>
                                 <h3>Detail Oriented Approach To reach your goal</h3>
                                 <p>All of our services are handled with a very sensetive care. Frequent communication with our clients makes it easier for us to deliver exectly what was asked. Explore our services and see what your company needs.</p>
-                                <button class="btn btn-gradient"><a href="#s_boxes">Explore <i class="fa fa-angle-right" aria-hidden="true"></i></a> </button>
+                                <button class="btn btn-gradient"><a href="#Service_boxes">Explore <i class="fa fa-angle-right" aria-hidden="true"></i></a> </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-    </div><!-- End Service_intro -->
-
+        </section><!-- End Service_intro -->
+    </div>
     <!-- Start Service_boxes -->
-    <div class="section fp-auto-height" id="s_boxes">
+    <div class="example-classname boxes s-boxex">
         <section id="Service_boxes">
             <div class="container">
                 <div class="row">
@@ -334,11 +349,10 @@
 </div>
 </div>
 </div>
-</section>
-</div><!-- End Service_boxes -->
-
+</section><!-- End Service_boxes -->
+</div>
 <!-- Start Call_to_action -->
-<div class="section fp-auto-height">
+<div class="example-classname call_to_action">
     <section id="Call_to_action">
         <div class="container">
             <div class="row justify-content-end">
@@ -362,11 +376,10 @@
                 </div>
             </div>
         </div>
-    </section>
-</div><!-- End Call_to_action -->
-
+    </section><!-- End Call_to_action -->
+</div>
 <!-- Start Testimonial -->
-<div class="section fp-auto-height">
+<div class="example-classname testimonial">
     <section id="Testimonial">
         <div class="container">
             <div class="row text-center">
@@ -448,11 +461,10 @@ for any sort of web solution. -->
 </div>
 </div>
 </div>
-</section>
-</div><!-- End Testimonial -->
-
+</section><!-- End Testimonial -->
+</div>
 <!-- Start Clients -->
-<div class="section fp-auto-height">
+<div class="example-classname clients">
     <section id="Clients">
         <div class="container">
             <div class="row">
@@ -473,11 +485,10 @@ for any sort of web solution. -->
                 </div>
             </div>
         </div>
-    </section>
-</div><!-- End Clients -->
-
+    </section><!-- End Clients -->
+</div>
 <!-- Start Footer -->
-<div class="section fp-auto-height">
+<div class="example-classname footer">
     <footer id="Footer">
 
         <div class="footer_main">
@@ -506,20 +517,20 @@ for any sort of web solution. -->
                         <div class="pages_menu">
                             <h4>Pages</h4>
                             <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Why Choose Us?</a></li>
-                                <li><a href="#">Services</a></li>
-                                <li><a href="#">Portfolio</a></li>
-                                <li><a href="#">FAQs</a></li>
-                                <li><a href="#">Contact</a></li>
+                                <li><a href="/">Home</a></li>
+                                <li><a href="#About">Why Choose Us?</a></li>
+                                <li><a href="#Service_intro">Services</a></li>
+<!--                                 <li><a href="#">Portfolio</a></li>
+                                <li><a href="#">FAQs</a></li> -->
+                                <li><a href="#Footer">Contact</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-md-3 offset-md-1">
                         <div class="address">
                             <h4>Contact Us</h4>
-                            <p><i class="fa fa-address-card-o" aria-hidden="true"></i> Flat# 6/B, H# 4, R# 1/A, Baridhara J Block, Dhaka- 1212, Bangladesh</p>
-                            <p class="phone"><i class="fa fa-phone" aria-hidden="true"></i> +8801811-115222 </p>
+                            <p><i class="fa fa-address-card-o" aria-hidden="true"></i> Flat# 6/B, H# 4, R# 1 /A, Baridhara J Block, Dhaka- 1212, Bangladesh</p>
+                            <p class="phone"><i class="fa fa-phone" aria-hidden="true"></i> +88 018 11115222 </p>
                             <p class="email"><i class="fa fa-paper-plane-o" aria-hidden="true"></i> info@devsnet.com</p>
                         </div>
                     </div>
@@ -537,26 +548,30 @@ for any sort of web solution. -->
             </div>
         </div>
 
-    </footer>
-</div><!-- End Footer -->
-<!-- End project here -->
-
-<!-- SCRIPTS -->
-<!-- JQuery -->
-<script type="text/javascript" src="frontend_assets/js/jquery-3.3.1.min.js"></script>
-<!-- Bootstrap tooltips -->
-<script type="text/javascript" src="frontend_assets/js/popper.min.js"></script>
-<!-- Bootstrap core JavaScript -->
-<script type="text/javascript" src="frontend_assets/js/bootstrap.min.js"></script>
-<!-- Owl Carousel Js -->
-<script type="text/javascript" src="frontend_assets/js/owl.carousel.min.js"></script>
-<!-- MDB core JavaScript -->
-<script type="text/javascript" src="frontend_assets/js/mdb.min.js"></script>
-<script type="text/javascript" src="frontend_assets/js/scrolloverflow.js"></script>
-<script type="text/javascript" src="frontend_assets/js/fullpage.js"></script>
-<!-- Custom JavaScript -->
-<script type="text/javascript" src="frontend_assets/js/main.js"></script>
+    </footer><!-- End Footer -->
 </div>
-</body>
+    <!-- End project here -->
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="frontend_assets/js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="frontend_assets/js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="frontend_assets/js/bootstrap.min.js"></script>
+    <!-- Owl Carousel Js -->
+    <script type="text/javascript" src="frontend_assets/js/owl.carousel.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="frontend_assets/js/mdb.min.js"></script>
+    <!-- jquery scrollify JavaScript -->
+    <script type="text/javascript" src="frontend_assets/js/jquery.scrollify.js"></script>
+    <!-- Custom JavaScript -->
+    <script type="text/javascript" src="frontend_assets/js/main.js"></script>
+
+
+<a id="back-to-top"><i class="fa fa-angle-double-up" aria-hidden="true"></i></a>
+
+
+    </body>
 
 </html>
