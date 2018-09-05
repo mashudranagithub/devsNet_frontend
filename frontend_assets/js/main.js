@@ -1,4 +1,6 @@
-$(document).ready(function(){
+$(document).ready(function(e){
+
+  if( !e ) e = window.event;
 
     $('#Viewport').owlCarousel({
         loop:true,
@@ -103,7 +105,8 @@ $('a[href*="#"]')
   // Remove links that don't actually link to anything
   .not('[href="#"]')
   .not('[href="#0"]')
-  .click(function(event) {
+  .click(function(e) {
+    if( !e ) e = window.event;
     // On-page links
     if (
       location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
@@ -146,7 +149,7 @@ $('a[href*="#"]')
             scrollSpeed: 1100,
             offset : 0,
             scrollbars: true,
-            standardScrollElements: ".boxes",
+            standardScrollElements: ".boxes, .modalbox",
             setHeights: true,
             overflowScroll: true,
             updateHash: true,

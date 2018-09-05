@@ -99,6 +99,10 @@ p{
     margin-top:5px;
 }
 
+.p-t-60{
+    padding-top: 110px!important;
+}
+
 .m-t-90-plus{
     margin-top:90px;
 }
@@ -240,6 +244,7 @@ nav.navbar a.nav-item.nav-link {
     font-weight: 700;
     letter-spacing: 0.4px;
     color: #00aeef;
+    transition: 0.5s;
 }
 
 nav.navbar a.nav-item.nav-link:hover{
@@ -405,6 +410,7 @@ section#Service_boxes {
 
 .service_image_box {
     display:  table;
+    margin:0 auto;
 }
 
 .service_image {
@@ -438,12 +444,11 @@ section#Call_to_action {
 
 .call_body{
 	min-height: 530px;
-	display: table;
+	/*display: table;*/
 }
 
 .call_body_content{
-	display: table-cell;
-	vertical-align: middle;
+	padding: 50px 0;
 }
 
 span.call_number {
@@ -528,7 +533,7 @@ section#Clients {
 }
 
 .footer_main{
-	border-bottom:1px solid #ddd;
+	border-bottom:1px solid #575757;
 	padding:30px 0 40px;
 }
 
